@@ -1,0 +1,32 @@
+Nishant Parekh 
+J046
+
+Exp 1:
+Q. Traffic signal with red, green, yellow LED. turn on red LED for 2sec, blink yellow 5 times with 0.5sec ON and 0.5 sec OFF then turn on green for 5 secs.
+Code:
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(2, HIGH);
+  delay(2000); 
+  digitalWrite(2, LOW);
+  for(int i=0;i<5;i++)
+  {
+      digitalWrite(3, HIGH);
+      delay(500); 
+      digitalWrite(3, LOW);
+      delay(500); 
+   }
+  digitalWrite(3, LOW);
+  digitalWrite(4, HIGH);
+  delay(5000); 
+  digitalWrite(4, LOW);
+   
+}
